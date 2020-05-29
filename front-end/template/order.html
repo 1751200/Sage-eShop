@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <link rel="stylesheet" href="../static/css/main_styles.css">
+    <link rel="stylesheet" href="../static/css/order.css">
+    <script src="../static/js/AJAXrequest.js"></script>
+    <script src="../static/js/order.js"></script>
+</head>
+<body>
+    <!-- navigator -->
+    <div class="header mini">
+        <div class="wrapper clearfix">
+            <div class="clearfix" id="top">
+                <h1 class="fl"><a href="index.html"><img src="../static/img/Sage_logo.png" /></a></h1>
+                <div class="fr clearfix" id="top1">
+                    <p class="fl">
+                        <a href="login.html" id="login">Sign in</a>
+                        <a href="register.html" id="reg">Sign up</a>
+                    </p>
+                    <form action="#" method="get" class="fl">
+                        <input type="text" placeholder="Search" />
+                        <input type="button" />
+                    </form>
+                    <div class="btn fl clearfix">
+                        <a href=".html"><img src="../static/img/user.png" /></a>
+                        <a href="#"><img src="../static/img/shopping-cart.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="clearfix" id="bott">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Categories</a></li>
+                <li><a href="">Accessories</a></li>
+                <li><a href="">Offers</a></li>
+                <li><a href="">Favorites</a></li>
+                <li><a href="">Account</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Order History -->
+    <div class="order">
+        <div class="wrapper clearfix">
+            <div class="sider_bar fl">
+                <h3>
+                    <p class="clearfix"><span class="fl">VodkaSoul</span><span class="fr">[Sign out]</span></p>
+                </h3>
+                <div>
+                    <h4>My transactions</h4>
+                    <ul>
+                        <li><a href="cart.html">My cart</a></li>
+                        <li class="on"><a href="order.html">My orders</a></li>
+                        <li><a href="">My reviews</a></li>
+                    </ul>
+                    <h4>Personal Center</h4>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Address</a></li>
+                    </ul>
+                    <h4>Manage Account</h4>
+                    <ul>
+                        <li><a href="order.html">My profile</a></li>
+                        <li><a href="">Change password</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order_list fl">
+                <div class="order_list_heading clearfix">
+                    <h2 class="fl">History Orders</h2>
+                </div>
+                <!-- <div class="order_item">
+                    <div class="order_item_top">
+                        <p class="order_statement">Received</p>
+                        <div class="order_info clearfix">
+                            <ul class="fl clearfix">
+                                <li>2016/12/1 18:53</li>
+                                <li>VodkaSoul</li>
+                                <li>Order: 5160513358520018</li>
+                                <li>Online payment</li>
+                            </ul>
+                            <p class="fr">TOTAL: <span>$99.00</span></p>
+                        </div>
+                    </div>
+                    <div class="order_stuff clearfix">
+                        <a href="#" class="fl"><img src="../static/img/products/product1.jpg" /></a>
+                        <p class="fl">
+                            <a href="#">A flower whose name I have no idea about</a>
+                            <a>Sold by: Sage eShop</a>
+                            <a>$19.9 &times; 2</a>
+                            <a><button>Buy it again</button></a>
+                        </p>
+                        <p class="fr">
+                            <a href="myprod.html">Write a product review</a>
+                            <a href="orderxq.html">Archive order</a>
+                        </p>
+                    </div>
+                    <div class="order_stuff clearfix">
+                        <a href="#" class="fl"><img src="../static/img/products/product1.jpg" /></a>
+                        <p class="fl">
+                            <a href="#">A flower whose name I have no idea about</a>
+                            <a>Sold by: Sage eShop</a>
+                            <a>$19.9</a>
+                            <a><button>Buy it again</button></a>
+                        </p>
+                        <p class="fr">
+                            <a href="myprod.html">Write a product review</a>
+                            <a href="orderxq.html">Archive order</a>
+                        </p>
+                    </div>
+                    <div class="order_stuff clearfix">
+                        <a href="#" class="fl"><img src="../static/img/products/product1.jpg" /></a>
+                        <p class="fl">
+                            <a href="#">A flower whose name I have no idea about</a>
+                            <a>Sold by: Sage eShop</a>
+                            <a>$19.9</a>
+                            <a><button>Buy it again</button></a>
+                        </p>
+                        <p class="fr">
+                            <a href="myprod.html">Write a product review</a>
+                            <a href="orderxq.html">Archive order</a>
+                        </p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="order_item">
+                    <div class="order_item_top">
+                        <p class="order_statement">Received</p>
+                        <div class="order_info clearfix">
+                            <ul class="fl clearfix">
+                                <li>2016/12/1 18:53</li>
+                                <li>VodkaSoul</li>
+                                <li>Order: 5160513358520018</li>
+                                <li>Online payment</li>
+                            </ul>
+                            <p class="fr">TOTAL: <span>$99.00</span></p>
+                        </div>
+                    </div>
+                    <div class="order_stuff clearfix">
+                        <a href="#" class="fl"><img src="../static/img/products/product1.jpg" /></a>
+                        <p class="fl">
+                            <a href="#">A flower whose name I have no idea about</a>
+                            <a>Sold by: Sage eShop</a>
+                            <a>$19.9</a>
+                            <a><button>Buy it again</button></a>
+                        </p>
+                        <p class="fr">
+                            <a href="myprod.html">Write a product review</a>
+                            <a href="orderxq.html">Archive order</a>
+                        </p>
+                    </div>
+                    <div class="order_stuff clearfix">
+                        <a href="#" class="fl"><img src="../static/img/products/product1.jpg" /></a>
+                        <p class="fl">
+                            <a href="#">A flower whose name I have no idea about</a>
+                            <a>Sold by: Sage eShop</a>
+                            <a>$19.9</a>
+                            <a><button>Buy it again</button></a>
+                        </p>
+                        <p class="fr">
+                            <a href="myprod.html">Write a product review</a>
+                            <a href="orderxq.html">Archive order</a>
+                        </p>
+                    </div>
+                    <div class="order_stuff clearfix">
+                        <a href="#" class="fl"><img src="../static/img/products/product1.jpg" /></a>
+                        <p class="fl">
+                            <a href="#">A flower whose name I have no idea about</a>
+                            <a>Sold by: Sage eShop</a>
+                            <a>$19.9</a>
+                            <a><button>Buy it again</button></a>
+                        </p>
+                        <p class="fr">
+                            <a href="myprod.html">Write a product review</a>
+                            <a href="orderxq.html">Archive order</a>
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>Zhaoyi SONG &copy; 2020 All Rights Reserved.<br /> School of Software Engineering, Tongji University, Shanghai.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,420 @@
+/**
+ * Global CSS settings
+ */
+
+html, body {
+    font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #262626;
+	background: #FFF;
+}
+
+ul li, ol li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #262626;
+	blr: expression(this.onFocus()=this.blur());
+}
+
+img {
+    border: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+
+input, textarea, select, button {
+	font-size: 100%;
+	font-family: inherit;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+label, button {
+	cursor: pointer
+}
+
+textarea {
+	white-space: pre;
+	resize: none;
+	border: 1px solid #ececec;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Clear floating styles
+ */
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.mt {
+	margin-top: 80px;
+}
+
+.wrapper {
+	width: 1160px;
+    margin: 0 auto;
+}
+
+/**
+ * Header
+ */
+
+
+.header {
+    margin-top: 30px;
+	min-width: 1160px;
+	position: relative;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.header h1 img {
+	width: 80%;
+	display: block;
+}
+
+.header div p {
+	margin-top: 20px;
+}
+
+.header div p a {
+	color: #262626;
+	padding: 0 10px;
+	font-size: 14px;
+}
+
+.header div p a:nth-child(1) {
+	border-right: 1px solid #dbdbdb;
+}
+
+.header div form {
+	width: 160px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 10px;
+	margin-top: 13px;
+	border-bottom: 1px solid #262626;
+}
+
+.header div form input:nth-child(1) {
+	background: none;
+	text-indent: 8px;
+}
+
+.header div form input:nth-child(2) {
+	float: right;
+	width: 13%;
+	padding-bottom: 10px;
+	background: url(../img/search.png) no-repeat right 5px;
+	cursor: pointer;
+}
+
+.header div.btn {
+	margin-top: 20px;
+	position: relative;
+}
+
+.header div.btn a {
+	float: left;
+	margin: 0 10px;
+}
+
+.header ul {
+	float: left;
+	margin-left: 18%;
+	line-height: 50px;
+}
+
+.header ul li {
+	float: left;
+	padding: 0 20px;
+}
+
+.header ul li>a {
+	color: #262626;
+	font-size: 14px;
+	display: inline-block;
+	position: relative;
+}
+
+.header ul li a:before {
+	content: "";
+	background: #7F7FFF;
+	position: absolute;
+	bottom: -3px;
+	z-index: -1;
+	transform: scaleX(0);
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
+.header ul li:nth-child(1) a:before {
+	left: -12px;
+}
+
+.header ul li>a:hover {
+	color: #7F7FFF;
+}
+
+.header ul li>a:hover:before {
+	width: 56px;
+	height: 2px;
+	transform: scaleX(1);
+	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	z-index: 9999;
+}
+
+/**
+ * Styles for navigator after scrolling
+ */
+
+.mini {
+	margin-top: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	padding: 20px 0;
+	background: #fff;
+	z-index: 100;
+}
+
+.mini h1 {
+	position: absolute;
+	left: 10%;
+	top: 20%;
+}
+
+.mini h1 img {
+	width: 65%;
+}
+
+
+.mini #top1 p,
+.mini #top1 div {
+	display: none !important;
+}
+
+.mini ul li a:before {
+	bottom: -25px;
+}
+
+.mini div.sList,
+.mini div.sList2 {
+	top: 81px;
+}
+
+.mini ul {
+	float: left;
+	margin-left: 18%;
+	line-height: 0;
+}
+
+.mini div form {
+	width: 185px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 10px;
+	margin-top: 5px;
+	border-bottom: 1px solid #262626;
+}
+
+.mini div.sList2 a {
+	float: left;
+	margin-right: 40px;
+	line-height: 38px;
+}
+
+.mini div.sList div dl dd {
+	line-height: 35px;
+}
+
+/**
+ * Banner 
+ */
+
+.banner{
+	min-width: 1160px;
+}
+
+.banner img{
+	width:100%;
+}
+
+/**
+ * Product display list
+ */
+
+.productList {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:space-between ;
+	margin-top:30px;
+}
+
+.productList a {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.productList a img {
+	display: block;
+	margin: 0 auto;
+}
+
+.productList a dl {
+	position: relative;
+}
+
+.productList a dl dd {
+	padding-left:10px;
+}
+
+.productList a dl dt {
+	width: 374px;
+	height: 374px;
+	overflow: hidden;
+}
+
+.productList a dl dt img {
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+.productList a dl:hover {
+	box-shadow: 0 0 15px #666;
+}
+
+.productList a dl:hover dt img {
+	transform: scale(1.1,1.1);
+	-webkit-transform: scale(1.1,1.1);
+}
+
+.productList a dl dt:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 340px;
+	border-right:2px solid #90D7EC;
+	 transform: scaleY(0); 
+	transform-origin:  0 100%;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	z-index: 100;
+	border-bottom: 2px solid #90D7EC;
+	width: 340px;
+}
+
+.productList a dl dt:before {
+	content: "";
+	position: absolute;
+	top: 20px;
+	border-top: 2px solid #90D7EC;
+	left: 20px;
+	width: 340px;
+	z-index: 100;
+	border-left: 2px solid #90D7EC;
+	height: 340px;
+	transform: scaleX(0); 
+	transform-origin: 0 -100%;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
+.productList a dl:hover dt:after { 
+	transform: scaleY(1);
+}
+
+.productList a dl:hover dt:before{ 
+	transform: scaleX(1);
+}
+
+.productList dl {
+	line-height: 30px;
+}
+
+.productList a dl dd:last-child {
+	color: #C10000;
+	font-size:16px;
+}
+
+.productList > p{
+	flex: 1;
+}
+.third {
+	flex-direction: row;
+}
+.productList .sec{
+	flex: 2;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:space-between ;
+}
+.last {
+	flex-direction: column;
+}
+.last > p{
+	display: flex;
+	justify-content:space-between ;
+}
+.last .sec{
+	flex: 1;
+}
+
+/**
+ * footer
+ */
+
+.footer {
+	min-width: 1160px;
+}
+
+.footer p {
+    background-color: purple;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+}

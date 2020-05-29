@@ -1,0 +1,91 @@
+/* 
+ *************** Product Details ***************
+ */
+
+.product{
+    margin-top:30px;
+    min-height: calc(100vh - 255px);
+}
+.product .product_details .product_image > img{
+	width:400px;
+	height:400px;
+}
+.product .product_image{
+	width: auto;
+}
+.product .intro{
+	width:650px;
+}
+.product .intro .title h2{
+    font-size: larger;
+	height:50px;
+	line-height:50px;
+	font-weight:normal;
+	font-size: 22px;
+}
+.product .intro .title p{
+    font-size: larger;
+	margin:10px 0;
+	color: #777;
+}
+.product .intro .title span{
+	font-size: 22px;
+	color:#C10000;
+}
+.product .intro .product_intro{
+	width:auto;
+}
+.product .btn{
+	padding:0 30px;
+}
+.product_content .product_image{
+	width:360px;
+}
+.product_content .product_image img{
+	display: block;
+}
+.product_intro{
+	width:350px;
+	padding:20px 10px;
+	margin:35px 0;
+	border-top:1px solid #dbdbdb;
+	border-bottom:1px solid #dbdbdb;
+}
+.product_intro > p{
+    font-size: larger;
+	height:30px;
+	line-height:30px;
+}
+.product_intro > p span{
+	color:#43A038;
+}
+.product_intro .num{
+	margin-top:20px;
+}
+.product_intro .num span{
+	width:27px;
+	height:27px;
+	line-height:27px;
+	text-align: center;
+}
+.product_intro .num img{
+	width:27px;
+	height:27px;
+	cursor: pointer;
+}
+.btns p{
+	width:170px;
+	height:40px;
+	line-height:40px;
+	text-align: center;
+	cursor:pointer;
+}
+.btns p.buy{
+    background: #C10000;
+    font-size: larger;
+	color: #fff;
+}
+.btns p.cart {
+    border:1px solid #000;
+    font-size: larger;
+}

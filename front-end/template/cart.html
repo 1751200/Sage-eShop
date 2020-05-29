@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../static/css/main_styles.css">
+    <link rel="stylesheet" href="../static/css/cart.css">
+    <script src="../static/js/AJAXrequest.js"></script>
+    <script src="../static/js/cart.js"></script>
+</head>
+<body>
+    <!-- navigator -->
+    <div class="header mini">
+        <div class="wrapper clearfix">
+            <div class="clearfix" id="top">
+                <h1 class="fl"><a href="index.html"><img src="../static/img/Sage_logo.png" /></a></h1>
+                <div class="fr clearfix" id="top1">
+                    <p class="fl">
+                        <a href="login.html" id="login">Sign in</a>
+                        <a href="register.html" id="reg">Sign up</a>
+                    </p>
+                    <form action="#" method="get" class="fl">
+                        <input type="text" placeholder="Search" />
+                        <input type="button" />
+                    </form>
+                    <div class="btn fl clearfix">
+                        <a href="order.html"><img src="../static/img/user.png" /></a>
+                        <a href="#"><img src="../static/img/shopping-cart.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="clearfix" id="bott">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Categories</a></li>
+                <li><a href="">Accessories</a></li>
+                <li><a href="">Offers</a></li>
+                <li><a href="">Favorites</a></li>
+                <li><a href="">Account</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- shopping cart -->
+    <div class="cart_info">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- Column Titles -->
+                    <div class="cart_info_columns clearfix">
+                        <div class="cart_info_col cart_info_col_product">Product</div>
+                        <div class="cart_info_col cart_info_col_price">Price</div>
+                        <div class="cart_info_col cart_info_col_quantity">Quantity</div>
+                        <div class="cart_info_col cart_info_col_total">Total</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row cart_items_row">
+                <div class="col">
+            
+                    <!-- Cart Item -->
+                    <div class="cart_item hide" id="product1">
+            
+                        <!-- Checkbox -->
+                        <div class="cart_item_cbx">
+                            <label class="float_left">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="cart_item_product">
+                            <div class="cart_item_image">
+                                <div><img src="../static/img/products/product1.jpg" alt=""></div>
+                            </div>
+                            <div class="cart_item_name_container">
+                                <div class="cart_item_name"><a href="#">name</a></div>
+                                <div class="cart_item_edit"><a href="#">Edit Product</a></div>
+                            </div>
+                        </div>
+            
+                        <!-- Price -->
+                        <div class="cart_item_price">$19.9</div>
+                        <!-- Quantity -->
+            
+                        <div class="cart_item_quantity">
+                            <div class="product_quantity_container">
+                                <p class="product_quantity clearfix">
+                                    <img class="sub" src="../static/img/sub.jpg" alt="sub"/>
+                                    <span>1</span>
+                                    <img class="add" src="../static/img/add.jpg" alt="add"/>
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Total -->
+                        <div class="cart_item_total">$19.9</div>
+                    </div>
+
+                    <!-- Cart Item -->
+                    <div class="cart_item hide" id="product2">
+                    
+                        <!-- Checkbox -->
+                        <div class="cart_item_cbx">
+                            <label class="float_left">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="cart_item_product">
+                            <div class="cart_item_image">
+                                <div><img src="../static/img/products/product2.jpg" alt=""></div>
+                            </div>
+                            <div class="cart_item_name_container">
+                                <div class="cart_item_name"><a href="#">name</a></div>
+                                <div class="cart_item_edit"><a href="#">Edit Product</a></div>
+                            </div>
+                        </div>
+                    
+                        <!-- Price -->
+                        <div class="cart_item_price">$19.9</div>
+                        <!-- Quantity -->
+                    
+                        <div class="cart_item_quantity">
+                            <div class="product_quantity_container">
+                                <p class="product_quantity clearfix">
+                                    <img class="sub" src="../static/img/sub.jpg" alt="sub" />
+                                    <span>1</span>
+                                    <img class="add" src="../static/img/add.jpg" alt="add" />
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- Total -->
+                        <div class="cart_item_total">$19.9</div>
+                    </div>
+
+                    <!-- Cart Item -->
+                    <div class="cart_item hide" id="product3">
+                    
+                        <!-- Checkbox -->
+                        <div class="cart_item_cbx">
+                            <label class="float_left">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    
+                        <!-- Name -->
+                        <div class="cart_item_product">
+                            <div class="cart_item_image">
+                                <div><img src="../static/img/products/product3.jpg" alt=""></div>
+                            </div>
+                            <div class="cart_item_name_container">
+                                <div class="cart_item_name"><a href="#">name</a></div>
+                                <div class="cart_item_edit"><a href="#">Edit Product</a></div>
+                            </div>
+                        </div>
+                    
+                        <!-- Price -->
+                        <div class="cart_item_price">$19.9</div>
+                        <!-- Quantity -->
+                    
+                        <div class="cart_item_quantity">
+                            <div class="product_quantity_container">
+                                <p class="product_quantity clearfix">
+                                    <img class="sub" src="../static/img/sub.jpg" alt="sub" />
+                                    <span>1</span>
+                                    <img class="add" src="../static/img/add.jpg" alt="add" />
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- Total -->
+                        <div class="cart_item_total">$19.9</div>
+                    </div>
+
+                    <!-- Cart Item -->
+                    <div class="cart_item hide" id="product4">
+                    
+                        <!-- Checkbox -->
+                        <div class="cart_item_cbx">
+                            <label class="float_left">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    
+                        <!-- Name -->
+                        <div class="cart_item_product">
+                            <div class="cart_item_image">
+                                <div><img src="../static/img/products/product4.jpg" alt=""></div>
+                            </div>
+                            <div class="cart_item_name_container">
+                                <div class="cart_item_name"><a href="#">name</a></div>
+                                <div class="cart_item_edit"><a href="#">Edit Product</a></div>
+                            </div>
+                        </div>
+                    
+                        <!-- Price -->
+                        <div class="cart_item_price">$19.9</div>
+                        <!-- Quantity -->
+                    
+                        <div class="cart_item_quantity">
+                            <div class="product_quantity_container">
+                                <p class="product_quantity clearfix">
+                                    <img class="sub" src="../static/img/sub.jpg" alt="sub" />
+                                    <span>1</span>
+                                    <img class="add" src="../static/img/add.jpg" alt="add" />
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- Total -->
+                        <div class="cart_item_total">$19.9</div>
+                    </div>
+
+                    <!-- Cart Item -->
+                    <div class="cart_item hide" id="product5">
+                    
+                        <!-- Checkbox -->
+                        <div class="cart_item_cbx">
+                            <label class="float_left">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    
+                        <!-- Name -->
+                        <div class="cart_item_product">
+                            <div class="cart_item_image">
+                                <div><img src="../static/img/products/product5.jpg" alt=""></div>
+                            </div>
+                            <div class="cart_item_name_container">
+                                <div class="cart_item_name"><a href="#">name</a></div>
+                                <div class="cart_item_edit"><a href="#">Edit Product</a></div>
+                            </div>
+                        </div>
+                    
+                        <!-- Price -->
+                        <div class="cart_item_price">$19.9</div>
+                        <!-- Quantity -->
+                    
+                        <div class="cart_item_quantity">
+                            <div class="product_quantity_container">
+                                <p class="product_quantity clearfix">
+                                    <img class="sub" src="../static/img/sub.jpg" alt="sub" />
+                                    <span>1</span>
+                                    <img class="add" src="../static/img/add.jpg" alt="add" />
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- Total -->
+                        <div class="cart_item_total">$19.9</div>
+                    </div>
+            
+                    <!-- Cart Item -->
+                    <div class="cart_item hide" id="product6">
+                    
+                        <!-- Checkbox -->
+                        <div class="cart_item_cbx">
+                            <label class="float_left">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    
+                        <!-- Name -->
+                        <div class="cart_item_product">
+                            <div class="cart_item_image">
+                                <div><img src="../static/img/products/product6.jpg" alt=""></div>
+                            </div>
+                            <div class="cart_item_name_container">
+                                <div class="cart_item_name"><a href="#">name</a></div>
+                                <div class="cart_item_edit"><a href="#">Edit Product</a></div>
+                            </div>
+                        </div>
+                    
+                        <!-- Price -->
+                        <div class="cart_item_price">$19.9</div>
+                        <!-- Quantity -->
+                    
+                        <div class="cart_item_quantity">
+                            <div class="product_quantity_container">
+                                <p class="product_quantity clearfix">
+                                    <img class="sub" src="../static/img/sub.jpg" alt="sub" />
+                                    <span>1</span>
+                                    <img class="add" src="../static/img/add.jpg" alt="add" />
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- Total -->
+                        <div class="cart_item_total">$19.9</div>
+                    </div>
+                </div>
+                <div class="goOn">It's empty. <a href="index.html">Go shopping.</a></div>
+            </div>
+
+            <!-- Cart Total -->
+            <div class="cart_total clearfix">
+                <p class="float_left">
+                    <input type="checkbox" class="checkAll" />
+                </p>
+                <p class="float_left">
+                    <a href="#">Select All</a>
+                    <a href="#" class="del">Delete</a>
+                </p>
+                <p class="float_right">
+                    <span><small id="total_item">0</small> items in total</span>
+                    <span>Total:&nbsp;<small id="total">$0.00</small></span>
+                    <a href="#" id="checkout">Checkout</a>
+                </p>
+            </div>
+        </div>
+    </div>    
+
+    <!-- footer -->
+    <div class="footer">
+        <p>Zhaoyi SONG &copy; 2020 All Rights Reserved.<br /> School of Software Engineering, Tongji University, Shanghai.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="../static/js/login.js"></script>
+    <script src="../static/js/AJAXrequest.js"></script>
+</head>
+<body>
+    <div class="login cleanfix">
+        <form action="#" method="POST">
+            <img src="" alt="">
+            <h2>Sign in to Sage E-shop</h2>
+            <fieldset>
+                <legend>Username</legend>
+                <input type="text" name="user_name" id="user_name" placeholder="Username">
+                <div class="user_error">Error</div>
+            </fieldset>
+            <fieldset>
+                <legend>Password</legend>
+                <input type="password" name="pwd" id="pwd" placeholder="Password">
+                <div class="pwd_error">Error</div>
+            </fieldset>
+            <div class="more_input clearfix">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Remember me</label>
+                <a href="#">Forget password?</a>
+            </div>
+            <input id="login_submit" value="Sign in" class="login_submit">
+            <div class="sign_up">
+                <p>New to Sage E-shop? <a href="register.html">Creat an account</a>.</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

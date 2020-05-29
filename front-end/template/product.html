@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../static/css/main_styles.css">
+    <link rel="stylesheet" href="../static/css/product.css">
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/AJAXrequest.js"></script>
+    <script src="../static/js/product.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="wrapper clearfix">
+            <div class="clearfix" id="top">
+                <h1 class="fl"><a href="index.html"><img src="../static/img/Sage_logo.png" /></a></h1>
+                <div class="fr clearfix" id="top1">
+                    <p class="fl" id="guest">
+                        <a href="login.html" id="login">Sign in</a>
+                        <a href="register.html" id="reg">Sign up</a>
+                    </p>
+                    <p class="fl" id="user">
+                        <a id="username">username</a>
+                        <a id="logout">Sign out</a>
+                    </p>
+                    <form action="#" method="get" class="fl">
+                        <input type="text" placeholder="Search" />
+                        <input type="button" />
+                    </form>
+                    <div class="btn fl clearfix">
+                        <a href="order.html"><img src="../static/img/user.png" /></a>
+                        <a href="cart.html"><img src="../static/img/shopping-cart.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="clearfix" id="bott">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="">Accessories</a></li>
+                <li><a href="">Offers</a></li>
+                <li><a href="">Favorites</a></li>
+                <li><a href="">Account</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="product">
+        <div class="product_details wrapper">
+            <div class="product_content clearfix">
+                <div class="product_image fl">
+                    <img class="det" src="../static/img/products/product1.jpg" id="product_image"/>
+                </div>
+                <div class="fr intro">
+                    <div class="title">
+                        <h2>Flower #1</h2>
+                        <span>$19.90</span>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea
+                        dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>
+                    </div>
+                    <div class="product_intro">
+                        <!-- <p>Number&nbsp;&nbsp;<span>2096</span> left</p> -->
+                        <p>Availability: <span>In Stock</span></p>
+                        <p><span>2096</span> left</p>
+                        <div class="num clearfix">
+                            <img class="fl sub" src="../static/img/sub.jpg">
+                            <span class="fl" id="quantity" contentEditable="true">1</span>
+                            <img class="fl add" src="../static/img/add.jpg">
+                        </div>
+                    </div>
+                    <div class="btns clearfix">
+                        <a href="#2">
+                            <p class="buy fl">Buy now</p>
+                        </a>
+                        <a href="#2">
+                            <p class="cart fr">Add to chart</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>Zhaoyi SONG &copy; 2020 All Rights Reserved.<br /> School of Software Engineering, Tongji University, Shanghai.
+        </p>
+    </div>
+</body>
+</html>

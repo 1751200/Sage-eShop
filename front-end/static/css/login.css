@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+div.login {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+div.login h2 {
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    border-width: 2px;
+    padding-bottom: 15px;
+}
+
+div.login form {
+    position: fixed;
+    top: 15%;
+    right: 150px;
+    padding: 20px 0;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    /* z-index: 10; */
+    background-color: white;
+    font-family: Arial, Verdana, sans-serif;
+    width: 460px;
+    height: 430px;
+}
+
+div.login fieldset {
+    border: none;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+div.login fieldset legend {
+    /* border-bottom: 1px solid #8EBEBE; */
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    padding: 2px;
+    /* clear: left; */
+    float: left;
+    /* margin: auto; */
+}
+
+div.login fieldset input {
+    border: 1px solid lightgrey;
+    width: 380px;
+    min-height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 10px;
+    /* clear: left; */
+    float: left;
+    outline: none;
+}
+
+.user_error, .pwd_error {
+    color: red;
+    font-size: small;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 5px;
+    display: none;
+}
+
+.more_input {
+    margin-left: 25px;
+}
+
+.more_input input {
+    float: left;
+    margin-top: 2px;
+}
+
+.more_input label {
+    float: left;
+    margin-left: 10px;
+}
+
+.more_input a {
+    float: right;
+    color: #666;
+    margin-right: 15px;
+}
+
+.more_input a:hover {
+    color: #ff8800;
+}
+
+.login_submit {
+    width: 360px;
+    height: 40px;
+    text-align: center;
+    margin-left: 50px;
+    /* margin-right: auto; */
+    background-color: #4277ad;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.sign_up {
+    text-align: right;
+    margin-right: 10px;
+    clear: both;
+}
