@@ -11,7 +11,7 @@ import re
 app = Flask(__name__)
 app.debug = True
 CORS(app, supports_credentials=True)
-database = pymongo.MongoClient("mongodb://localhost:27017/").Sage
+database = pymongo.MongoClient("mongodb://VodkaSoul:15050285917@101.37.34.56:27017/").Sage
 
 
 @app.route("/user/register", methods=['POST'])
@@ -88,7 +88,7 @@ def update_order(username):
                                    'price': database.product.find_one({'productID': purchase['productID']})['price']}\
                                   for purchase in order['purchases']] for order in database.order.find({'username': username})])
     else:
-        pIds = json.loads(request.get_data())
-        database.order.insert_one({'username': username, 'purchases': [{'productID': pId, 'quantity': database.cart.find_one(
+        pIds = json.loads(request.get_data())    
+        database.order.insert_one({'username': username, 'purchases': [{'productID': pId, 'quantity': database.cart.find_one_and_delete(
             {'username': username, 'productID': pId})['quantity']} for pId in pIds], 'create_time': datetime.datetime.utcnow()})
         return jsonify(code=20000, message="success create an order")

@@ -37,6 +37,9 @@
                     cartItem.querySelector('.cart_item_price').innerText = item.price;
                     cartItem.querySelector('.cart_item_total').innerText = "$" + (parseFloat(item.price.substring(1)) * parseInt(item.quantity)).toFixed(2);
                 });
+                if (document.querySelectorAll(".cart_item.hide").length == document.querySelectorAll(".cart_item").length) {
+                    document.querySelector(".goOn").style.display = "block";
+                }
             } 
         }
     }
@@ -175,21 +178,15 @@
                 if (xhr.status === 200 && xhr.readyState === 4) {
                     var response = JSON.parse(xhr.responseText);
                     if (response.code === 20000) {
-                        checkedItems.forEach(item => {
-                            item.checked = false;
-                            calculateTotal();
-                            countNum();
-                            item.parentNode.parentNode.parentNode.classList.add("hide");
-                            if (document.querySelectorAll(".cart_item.hide").length == document.querySelectorAll(".cart_item").length) {
-                                document.querySelector(".goOn").style.display = "block";
-                            }
-                        });
                         window.location.href = "order.html";
                     } else {
                         alert(response.message);
                     }
                 }
             };
+            // productIDs.forEach(productID => {
+            //     deleteAjax("user/" + getCookie('username') + "/cart", { 'productID': productID });
+            // });
         }
     }
 })();

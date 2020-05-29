@@ -22,7 +22,7 @@
                     console.log(products);
                     var history = document.querySelector(".order_list_heading");
                     var orderList = document.querySelector(".order_list");
-                    for (var i = 0; i < orders.length; i++) {
+                    for (var i = orders.length - 1; i > -1; i--) {
                         orderList.appendChild(createOrderInstance(orders[i], products[i]));
                     }
                 } else {

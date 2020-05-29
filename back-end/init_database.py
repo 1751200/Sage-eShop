@@ -1,7 +1,8 @@
 import pymongo
 import json
 
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient(
+    "mongodb://VodkaSoul:15050285917@101.37.34.56:27017/")
 database = client.Sage
 
 # init product collection
