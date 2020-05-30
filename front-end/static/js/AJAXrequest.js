@@ -1,4 +1,4 @@
-baseUrl = "http://localhost:5000/"
+baseUrl = "http://101.37.34.56:3000/"
 imgUrl = "../static/img/products/"
 
 function getCookie(cookieName) {

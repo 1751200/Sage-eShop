@@ -55,7 +55,7 @@ def update_cart(username):
         return jsonify(code=20000, message="success", data=[{'productID': item['productID'], 'quantity': item['quantity'], \
             'name': database.product.find_one({'productID': item['productID']})['name'], \
                 'price': database.product.find_one({'productID': item['productID']})['price']} \
-                    for item in database.cart.find({'username': 'VodkaSoul'})])
+                    for item in database.cart.find({'username': username})])
     elif request.method == "POST":
         data = json.loads(request.get_data())
         data.update({"username": username})
