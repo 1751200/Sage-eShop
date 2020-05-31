@@ -6,6 +6,12 @@
             alert("Please log in first!")
             window.location.href = "login.html";
         } else {
+            this.document.querySelector(".username").innerText = getCookie("username");
+            this.document.querySelector(".logout").onclick = function () {
+                clearCookie("token");
+                clearCookie("username");
+                window.location.href = "login.html";
+            };
             initOrders();
         }
     };
