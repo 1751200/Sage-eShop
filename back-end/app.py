@@ -92,3 +92,17 @@ def update_order(username):
         database.order.insert_one({'username': username, 'purchases': [{'productID': pId, 'quantity': database.cart.find_one_and_delete(
             {'username': username, 'productID': pId})['quantity']} for pId in pIds], 'create_time': datetime.datetime.utcnow()})
         return jsonify(code=20000, message="success create an order")
+
+
+@app.route("/jump", methods=["GET", "POST"])
+def rank():
+    db = pymongo.MongoClient("mongodb://VodkaSoul:15050285917@101.37.34.56:27017/").Jump
+    if request.method == "GET":
+        results = db.Score.find().sort('score', pymongo.DESCENDING)
+        return jsonify(text=[{'name': r['nickname'], 'score': r['score']} for r in results])
+    else:
+        record = json.loads(request.get_data())
+        mini = db.Score.find_one(sort=[("score", 1)])
+        if record['score'] >= mini['score']:
+            db.Score.update_one(mini, {'$set': record})
+        return jsonify(code=20000)
