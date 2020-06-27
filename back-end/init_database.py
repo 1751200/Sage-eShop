@@ -2,7 +2,7 @@ import pymongo
 import json
 
 client = pymongo.MongoClient(
-    "mongodb://VodkaSoul:15050285917@101.37.34.56:27017/")
+    "mongodb client here")
 database = client.Jump
 
 # init product collection
