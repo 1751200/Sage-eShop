@@ -11,7 +11,7 @@ import re
 app = Flask(__name__)
 app.debug = True
 CORS(app, supports_credentials=True)
-database = pymongo.MongoClient("mongodb://VodkaSoul:15050285917@101.37.34.56:27017/").Sage
+database = pymongo.MongoClient("mongodb cilent here").Sage
 
 
 @app.route("/user/register", methods=['POST'])
